@@ -69,14 +69,6 @@ function memcache_get($obj, $keys){
   if(!is_array($keys)){
     $keys = array($keys);
   }
-  foreach($keys as $k => $v){
-    if(preg_match('/([^#]+)#/i', $v, $m)){
-      unset($keys[$k]);
-      foreach(glob(cDir.rKey($m[1]).'*'.ext) as $e){
-        $keys[] = str_replace(array(cDir, ext), '', $e);
-      }
-    }
-  }
   $params = array();
   foreach($keys as $key){
     $key = rKey($key);

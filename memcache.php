@@ -6,8 +6,8 @@
  */
 define('MEMCACHE_COMPRESSED', true);
 define('cDir', './cache/'); # Директория кеша
-define('ext', '.tmp'); # Разширение файла
-define('extT', '.cacheTime'); # Разширение временного файла
+define('ext', '.tmp'); # Расширение файла
+define('extT', '.cacheTime'); # Расширение временного файла
 
 $cacheData = array(); # Данные о кеше 
 $iniData = array(); # Данные о времени жизни кеша
